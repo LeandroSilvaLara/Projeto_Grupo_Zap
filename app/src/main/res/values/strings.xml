@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">grupozap</string>
+    <string name="versao_app">Versão 1.0.0</string>
+    <string name="logo_viva_real">Logo Viva Real</string>
+    <string name="text_sobre">Por que é mais fácil comprar \nseu apê na Loft?</string>
+    <string name="Logo_zap">Logo Zao Imóveis</string>
+    <string name="text_versao_app">Versão 1.0.0</string>
 </resources>

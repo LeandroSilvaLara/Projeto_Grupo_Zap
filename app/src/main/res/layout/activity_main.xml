@@ -8,9 +8,93 @@
     android:background="@color/gree_color"
     tools:context=".contract.MainActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/logo_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_24"
+            android:src="@drawable/logo_grupo_zap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/desc_sobre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="102dp"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:text="@string/text_sobre"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo_main" />
+
+        <ImageButton
+            android:id="@+id/btn_vivareal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:background="@drawable/shape_botao_vivareal_logo"
+            android:contentDescription="@string/logo_viva_real"
+            android:elevation="2dp"
+            android:src="@drawable/logo_vivareal"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc_sobre" />
+
+        <ImageView
+            android:id="@+id/btn_zap"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:background="@drawable/shape_botao_zap_logo"
+            android:contentDescription="@string/Logo_zap"
+            android:elevation="2dp"
+            android:src="@drawable/logo_zap"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vivareal" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_zap"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/versao_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_24"
+                    android:layout_marginTop="350dp"
+                    android:layout_marginEnd="@dimen/margin_24"
+                    android:text="@string/text_versao_app"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+        </LinearLayout>
 
 
 
