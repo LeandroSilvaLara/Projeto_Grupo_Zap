@@ -5,4 +5,10 @@
     <string name="text_sobre">Por que é mais fácil comprar \nseu apê na Loft?</string>
     <string name="Logo_zap">Logo Zao Imóveis</string>
     <string name="text_versao_app">Versão 1.0.0</string>
+    <string name="imovel_aluguel">Imóvel para Aluguel</string>
+    <string name="bedroom">quarto</string>
+    <string name="bathroom">banheiro</string>
+    <string name="meters">m²</string>
+    <string name="vacancy">vagas</string>
+    <string name="value">Valor</string>
 </resources>
