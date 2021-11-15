@@ -11,4 +11,7 @@
     <string name="meters">m²</string>
     <string name="vacancy">vagas</string>
     <string name="value">Valor</string>
+    <string name="property_type_sale">Imóvel para Venda</string>
+    <string name="property_type_rent">Imóvel para Aluguel</string>
+    <string name="formatacao_reais">R$ %1$.2f</string>
 </resources>
