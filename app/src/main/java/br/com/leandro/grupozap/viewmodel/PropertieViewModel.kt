@@ -14,6 +14,7 @@ class PropertieViewModel {
 
     fun setVivaReal(buildings: List<Building>) {
         filter(buildings)
+        mainActivity.st
 
     }
 
