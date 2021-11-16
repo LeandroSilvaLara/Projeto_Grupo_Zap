@@ -14,4 +14,7 @@
     <string name="property_type_sale">Imóvel para Venda</string>
     <string name="property_type_rent">Imóvel para Aluguel</string>
     <string name="formatacao_reais">R$ %1$.2f</string>
+    <string name="logo_zap">Logo GrupoZap</string>
+    <string name="title_main_activity">Imóveis perto de você</string>
+    <string name="next">Ver Mais</string>
 </resources>
