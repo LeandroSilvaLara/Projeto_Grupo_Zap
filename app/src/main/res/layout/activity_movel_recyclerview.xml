@@ -2,14 +2,39 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@color/cinza"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarDetail"
+        android:background="@color/gree_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_tollbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/margin_16"
+                android:text="@string/Detalhe"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/imagens_buildin_activity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/imagens_itens"
         tools:itemCount="9"
@@ -32,13 +57,82 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/imovel_neighborhood_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_34"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_size_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/item_BuildingType_activity"
+        android:text="@string/Local"/>
+
+    <TextView
+        android:id="@+id/imovel_city_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imovel_neighborhood_detail"
+        android:text="@string/Bairro"/>
+
+    <ImageView
+        android:id="@+id/imageViewAreaDetail"
+        android:layout_width="@dimen/widht_20"
+        android:layout_height="@dimen/height_20"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_24"
+        android:src="@drawable/ic_map"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imovel_city_detail"
+        android:contentDescription="@string/icon_area_detail"/>
+
+    <TextView
+        android:id="@+id/num_square_meters_building_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margint_start_4"
+        android:layout_marginLeft="@dimen/margin_left_4"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAreaDetail"
+        app:layout_constraintTop_toTopOf="@+id/imageViewAreaDetail"
+        tools:text="35"/>
+    <TextView
+        android:id="@+id/square_meters_building_activity"
+        android:text="@string/meters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        app:layout_constraintStart_toEndOf="@+id/num_square_meters_building_activity"
+        app:layout_constraintTop_toTopOf="@+id/num_square_meters_building_activity"/>
+
+    <ImageView
+        android:id="@+id/imageViewBadroomDetail"
+        android:layout_width="@dimen/widht_20"
+        android:layout_height="@dimen/height_20"
+        android:layout_marginStart="@dimen/margin_34"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_24"
+        android:src="@drawable/ic_hotel"
+        app:layout_constraintStart_toEndOf="@+id/num_square_meters_building_activity"
+        app:layout_constraintTop_toBottomOf="@+id/imovel_city_detail"
+        android:contentDescription="@string/icon_badroom_detail" />
+
+    <TextView
         android:id="@+id/num_bedroom_building_activity"
         tools:text="4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8"
-        app:layout_constraintTop_toBottomOf="@+id/item_BuildingType_activity"
-        app:layout_constraintStart_toStartOf="@+id/item_BuildingType_activity"
+        android:layout_marginStart="@dimen/margint_start_4"
+        android:layout_marginLeft="@dimen/margin_left_4"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBadroomDetail"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBadroomDetail"
         />
 
     <TextView
@@ -51,14 +145,28 @@
         app:layout_constraintStart_toEndOf="@+id/num_bedroom_building_activity"
         />
 
+    <ImageView
+        android:id="@+id/imageViewBathroomsDetail"
+        android:layout_width="@dimen/widht_20"
+        android:layout_height="@dimen/height_20"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_24"
+        android:src="@drawable/ic_bathtub"
+        app:layout_constraintTop_toBottomOf="@+id/imovel_city_detail"
+        app:layout_constraintStart_toEndOf="@+id/bedroom_building_activity"
+        android:contentDescription="@string/icon_bathrooms_detail"
+        />
+
     <TextView
         android:id="@+id/num_bathroom_building_activity"
         android:text="2"
+        android:src="@drawable/ic_bathtub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_8"
         app:layout_constraintTop_toTopOf="@+id/num_bedroom_building_activity"
-        app:layout_constraintStart_toEndOf="@+id/bedroom_building_activity"/>
+        app:layout_constraintStart_toEndOf="@+id/imageViewBathroomsDetail"/>
 
     <TextView
         android:id="@+id/bathroom_building_activity"
@@ -69,39 +177,36 @@
         app:layout_constraintTop_toTopOf="@+id/num_bedroom_building_activity"
         app:layout_constraintStart_toEndOf="@+id/num_bathroom_building_activity"/>
 
-    <TextView
-        android:id="@+id/num_square_meters_building_activity"
-        tools:text="70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/num_bedroom_building_activity"
-        app:layout_constraintStart_toStartOf="@+id/num_bedroom_building_activity" />
 
-    <TextView
-        android:id="@+id/square_meters_building_activity"
-        android:text="@string/meters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_24"
-        app:layout_constraintTop_toBottomOf="@+id/num_bedroom_building_activity"
-        app:layout_constraintStart_toStartOf="@+id/num_square_meters_building_activity"/>
+    <ImageView
+        android:id="@+id/imageViewParkingSpacesDetail"
+        android:layout_width="@dimen/widht_20"
+        android:layout_height="@dimen/height_20"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/ic_car"
+        app:layout_constraintStart_toEndOf="@+id/bathroom_building_activity"
+        app:layout_constraintTop_toBottomOf="@+id/imovel_neighborhood_detail"
+        android:contentDescription="@string/icon_parking_spaces_detail" />
 
     <TextView
         android:id="@+id/num_vacancy_building_fragment"
         tools:text="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/num_bedroom_building_activity"
-        app:layout_constraintStart_toStartOf="@+id/num_bathroom_building_activity"/>
+        android:layout_marginStart="@dimen/margin_24"
+        app:layout_constraintTop_toTopOf="@+id/imageViewParkingSpacesDetail"
+        app:layout_constraintStart_toStartOf="@+id/imageViewParkingSpacesDetail"/>
 
     <TextView
         android:id="@+id/vacancy_building_activity"
         android:text="@string/vacancy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_8"
-        app:layout_constraintTop_toBottomOf="@+id/num_bedroom_building_activity"
-        app:layout_constraintStart_toEndOf="@+id/num_vacancy_building_fragment"/>
+        android:layout_marginStart="@dimen/margin_18"
+        app:layout_constraintTop_toTopOf="@+id/imageViewParkingSpacesDetail"
+        app:layout_constraintStart_toEndOf="@+id/imageViewParkingSpacesDetail"/>
 
     <TextView
         android:id="@+id/num_values_building_activity"
@@ -124,7 +229,7 @@
         android:text="@string/value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/margin_34"
         android:textColor="@color/black"
         android:textSize="@dimen/med_font_size"
         app:layout_constraintTop_toBottomOf="@+id/vacancy_building_activity"

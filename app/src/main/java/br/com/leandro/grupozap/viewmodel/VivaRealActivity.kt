@@ -51,7 +51,7 @@ class VivaRealActivity : AppCompatActivity() {
 
     private fun partItemClicked(imovel: Building) {
         val intent: Intent = Intent (this, BuildingActivity::class.java)
-        intent.putExtra("buildings_vivareal", imovel as Serializable)
+        intent.putExtra("building", imovel as Serializable)
         startActivity(intent)
     }
 }

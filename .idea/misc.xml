@@ -4,15 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19166666666666668" />
+        <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_arrow.xml" value="0.2064814814814815" />
+        <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_bathtub.xml" value="0.2064814814814815" />
+        <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_car.xml" value="0.2064814814814815" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_filter.xml" value="0.21614583333333334" />
+        <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_hotel.xml" value="0.21614583333333334" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19166666666666668" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_logo_vivareal.xml" value="0.19166666666666668" />
+        <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/ic_map.xml" value="0.21614583333333334" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/shape_botao_vivareal_logo.xml" value="0.30185185185185187" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/shape_botao_zap_logo.xml" value="0.33240740740740743" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/drawable/splash_bg.xml" value="0.14351851851851852" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/layout/activity_main_list.xml" value="0.25" />
-        <entry key="..\:/PROJETO/grupozap2/app/src/main/res/layout/activity_movel_recyclerview.xml" value="0.25" />
+        <entry key="..\:/PROJETO/grupozap2/app/src/main/res/layout/activity_movel_recyclerview.xml" value="0.33" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/layout/fragment_detail.xml" value="0.5" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/layout/imagens_itens.xml" value="0.2" />
         <entry key="..\:/PROJETO/grupozap2/app/src/main/res/layout/loading_content.xml" value="0.2" />
