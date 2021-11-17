@@ -36,7 +36,7 @@ class PropertieViewModel {
                     )
                         valSaleminimum = valSaleminimum - (0.1 * valSaleminimum)
 
-                    if (i.pricingInfos.period.toDouble() <= 700000.0) {
+                    if (i.pricingInfos.price.toDouble() <= 700000.0) {
                         listVivaReal.add(i)
                     }
                     if ((i.pricingInfos.price.toDouble() / i.usableAreas > 3500.0) && i.pricingInfos.price.toDouble() >= valSaleminimum) {

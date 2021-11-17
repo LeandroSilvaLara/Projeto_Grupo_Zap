@@ -35,7 +35,7 @@
             android:layout_marginTop="@dimen/margin_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imagens_fragment"/>
+            app:layout_constraintStart_toEndOf="@+id/imagens_fragment"/>
 
         <TextView
             android:id="@+id/num_bedroom_building_fragment"
@@ -45,7 +45,7 @@
             android:layout_marginStart="@dimen/margin_24"
             android:layout_marginTop="@dimen/margin_8"
             app:layout_constraintTop_toBottomOf="@+id/rental_building_fragment"
-            app:layout_constraintStart_toStartOf="@+id/imagens_fragment"
+            app:layout_constraintStart_toEndOf="@+id/imagens_fragment"
             />
 
         <TextView
@@ -82,8 +82,8 @@
             android:text="70"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/num_bathroom_building_fragment"
-            app:layout_constraintStart_toEndOf="@+id/num_bathroom_building_fragment"/>
+            app:layout_constraintTop_toBottomOf="@+id/num_bedroom_building_fragment"
+            app:layout_constraintStart_toStartOf="@+id/num_bedroom_building_fragment"/>
 
         <TextView
             android:id="@+id/square_meters_building_fragment"

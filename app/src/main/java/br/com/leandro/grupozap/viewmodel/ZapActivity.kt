@@ -2,14 +2,13 @@ package br.com.leandro.grupozap.viewmodel
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.com.leandro.grupozap.R
 import br.com.leandro.grupozap.adapter.BuildingActivity
 import br.com.leandro.grupozap.home.model.Building
-import br.com.leandro.grupozap.home.view.BuildingFragment
+import br.com.leandro.grupozap.home.view.BuildingAdapter
 import kotlinx.android.synthetic.main.zap_catalog_activity.*
 import java.io.Serializable
 
@@ -29,11 +28,11 @@ class ZapActivity : AppCompatActivity() {
     }
 
     private fun setRecycler() {
-        editBuildings.adapter = BuildingFragment(listImoveis, this, { partItem: Building -> partItemClicked(partItem) })
+        editBuildings.adapter = BuildingAdapter(listImoveis, this, { partItem: Building -> partItemClicked(partItem) })
     }
 
     private fun findViews() {
-        val buildings = intent.extras?.get("buildings_zap") as List<Building>
+        val buildings = intent.extras!!.get("building_zap") as List<Building>
         listImoveis = buildings.take(contador)
         editBuildings = grupozap_list_imoveeis
 
