@@ -2,6 +2,7 @@ package br.com.leandro.grupozap.viewmodel
 
 import br.com.leandro.grupozap.contract.MainActivity
 import br.com.leandro.grupozap.home.model.Building
+import br.com.leandro.grupozap.utils.Lat_LonUtils
 import java.util.Locale.filter
 
 class PropertieViewModel {
@@ -25,10 +26,42 @@ class PropertieViewModel {
     fun  filter (buildings: List<Building>) {
         listVivaReal = ArrayList()
         listGrupZap = ArrayList()
-        for (x in buildings ) {
-            
+        for (i in buildings ) {
+            if (i.address.geoLocation.location.lat != 0.0 && i.address.geoLocation.location.lon != 0.0 && i.pricingInfos.monthlyCondoFee != null && i.usableAreas > 0) {
+                if (i.pricingInfos.businessType == "SALE") {
+                    if (Lat_LonUtils.calcular(
+                            i.address.geoLocation.location.lat,
+                            i.address.geoLocation.location.lon
+                        )
+                    )
+                        valSaleminimum = valSaleminimum - (0.1 * valSaleminimum)
+
+                    if (i.pricingInfos.period.toDouble() <= 700000.0) {
+                        listVivaReal.add(i)
+                    }
+                    if ((i.pricingInfos.price.toDouble() / i.usableAreas > 3500.0) && i.pricingInfos.price.toDouble() >= valSaleminimum) {
+                        listGrupZap.add(i)
+                    }
+                    valSaleminimum = 600000.0
+
+                }else {
+                    if (Lat_LonUtils.calcular(
+                         i.address.geoLocation.location.lat,
+                         i.address.geoLocation.location.lon
+                        )
+                    )
+                        valSaleMaximum = valSaleMaximum + (0.5 * valSaleMaximum)
+                    if (i.pricingInfos.monthlyCondoFee.toDouble() >= (0.3 * i.pricingInfos.price.toDouble()) && i.pricingInfos.rentalTotalPrice.toDouble() <= valSaleMaximum) {
+                        listVivaReal.add(i)
+                    }
+                    if (i.pricingInfos.rentalTotalPrice.toDouble() >= 3500.0) {
+                        listGrupZap.add(i)
+                    }
+                    valSaleMaximum = 4000.0
+                }
+            }
         }
     }
-
-
 }
+
+

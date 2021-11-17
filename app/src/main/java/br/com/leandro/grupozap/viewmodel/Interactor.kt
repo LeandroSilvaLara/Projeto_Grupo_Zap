@@ -22,8 +22,14 @@ class Interactor{
                     if (int == 0)
                         presenter.setVivaReal(imoveis)
                     else
-                        presenter.setZ
+                        presenter.setZap(imoveis)
                 }
+            }
+
+            override fun onFailure(
+                call: Call<List<Building>?>,
+                t: Throwable
+            ) {
             }
         })
     }
