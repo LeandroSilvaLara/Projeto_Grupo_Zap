@@ -22,7 +22,7 @@ class Interactor{
                     if (int == 0)
                         presenter.setVivaReal(imoveis)
                     else
-                        presenter.set
+                        presenter.setZ
                 }
             }
         })
