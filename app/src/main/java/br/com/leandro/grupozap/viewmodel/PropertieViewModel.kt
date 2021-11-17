@@ -17,8 +17,17 @@ class PropertieViewModel {
         mainActivity.startVivaReal(listVivaReal.toList())
     }
 
-    fun  filter (buildings: List<Building>) {
+    fun setZap(buildings: List<Building>){
+        filter(buildings)
+        mainActivity.startGrupZap(listGrupZap.toList())
+    }
 
+    fun  filter (buildings: List<Building>) {
+        listVivaReal = ArrayList()
+        listGrupZap = ArrayList()
+        for (x in buildings ) {
+            
+        }
     }
 
 
