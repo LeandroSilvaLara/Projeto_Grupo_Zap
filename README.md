@@ -8,7 +8,7 @@ To launch the application click on Run App (Shift + F10) and then choose the Dev
 
 
 ## Clean Architecture
-![Kiku](readme-images/clean_architecture_reloaded_main.png)
+![Kiku](https://user-images.githubusercontent.com/49800137/142410325-80149204-a378-4174-bd8a-d858eb2efc9e.png)
 
 
 ### ----------------------------------------------------------------------------------------------
