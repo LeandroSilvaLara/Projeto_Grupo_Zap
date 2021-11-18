@@ -210,28 +210,19 @@
 
     <TextView
         android:id="@+id/num_values_building_activity"
-        tools:text="R$ 1000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_8"
-        android:textSize="@dimen/med_font_size"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="@dimen/margin_24"
-        app:layout_constraintEnd_toEndOf="@+id/item_BuildingType_activity"
-        app:layout_constraintTop_toTopOf="@+id/values_building_activity"
-        app:layout_constraintStart_toEndOf="@+id/values_building_activity"
-        app:layout_constraintVertical_bias="0.0"
-        />
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginBottom="@dimen/margin_16"
+        tools:text="R$ 00,00"
+        android:textColor="@color/gree_color"
+        android:textSize="@dimen/title_size_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacancy_building_activity" />
 
-    <TextView
-        android:id="@+id/values_building_activity"
-        android:text="@string/value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_34"
-        android:textColor="@color/black"
-        android:textSize="@dimen/med_font_size"
-        app:layout_constraintTop_toBottomOf="@+id/vacancy_building_activity"
-        app:layout_constraintStart_toStartOf="@+id/item_BuildingType_activity"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

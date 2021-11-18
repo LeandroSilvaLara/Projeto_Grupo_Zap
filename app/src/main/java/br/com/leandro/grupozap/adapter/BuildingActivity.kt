@@ -29,7 +29,8 @@ class BuildingActivity : AppCompatActivity() {
         num_bedroom_building_activity.text = building.bedrooms.toString()
         num_vacancy_building_fragment.text = building.parkingSpaces.toString()
         num_square_meters_building_activity.text = building.usableAreas.toString()
-
+        imovel_neighborhood_detail.text = building?.address.neighborhood
+        imovel_city_detail.text = building?.address.city
         if (building.pricingInfos.businessType.equals("SALE"))
             item_BuildingType_activity.text = this.getString(R.string.property_type_sale)
         else

@@ -13,4 +13,6 @@ class RetrofitInitializer {
     fun buildingService(): BuildingService {
         return retrofit.create(BuildingService::class.java)
     }
+
+
 }
