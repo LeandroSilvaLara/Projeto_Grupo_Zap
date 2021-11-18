@@ -14,17 +14,17 @@ To launch the application click on Run App (Shift + F10) and then choose the Dev
 ### ----------------------------------------------------------------------------------------------
 
 ## Android 3 Layers Architecture
-![Kiku](readme-images/clean_architecture_reloaded_layers.png)
+![Kiku](https://user-images.githubusercontent.com/49800137/142411072-0ed5479d-3c5a-4d0e-85c9-8988c65556d5.png)
 
 ### ----------------------------------------------------------------------------------------------
 
 ## UI Layer: MVVM
-![Kiku](readme-images/layer-communication.png)
+![Kiku](https://user-images.githubusercontent.com/49800137/142411126-caa4095b-92c6-4e2e-a1c7-bc8f35aca8b6.png)
 
 ### ----------------------------------------------------------------------------------------------
 
 ## Data Layer: Repository
-![Kiku](readme-images/clean_archictecture_reloaded_repository.png)
+![Kiku](https://user-images.githubusercontent.com/49800137/142411171-a197ce88-a986-4047-85e7-ee4a49b80f5d.png)
 
 ## Technologies - [Dependencies.kt](buildSrc/src/main/java/Dependencies.kt) file
 * Kotlin - As main language
