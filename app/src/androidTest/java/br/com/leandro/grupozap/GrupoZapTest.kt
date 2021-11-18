@@ -27,6 +27,7 @@ class GrupoZapTest {
     @JvmField
     val rule = IntentsTestRule(MainActivity::class.java)
 
+    //QUANDO USUÁRIO CLICAR INICIA PROJETO VAI TELA GRUPOZAP
     @Test
     fun abrir_tela_zap() {
         onView(withId(R.id.btn_zap)).perform(click())
@@ -34,6 +35,7 @@ class GrupoZapTest {
         intended(hasComponent("com.vicolmoraes.grupozapchallenge.zap.ZapActivity"))
     }
 
+    //QUANDO USUÁRIO CLICAR INICIA PROJETO VAI TELA VIVAREAL
     @Test
     fun abrir_tela_vivaReal() {
         onView(withId(R.id.btn_vivareal)).perform(click())
@@ -41,6 +43,7 @@ class GrupoZapTest {
         intended(hasComponent("com.vicolmoraes.grupozapchallenge.vivaReal.VivaRealActivity"))
     }
 
+    //VAI NAVEGAR NA TELA VIVREAL FICA IMOVEIS
     @Test
     fun abrir_tela_imovel() {
         onView(withId(R.id.btn_vivareal)).perform(click())
